@@ -30,10 +30,10 @@ steps:
                 workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
                 environmentServiceNameAzureRM: 'svc'
 
-                - task: TerraformTask@5
-                displayName : Terraform Apply
-                  inputs:
-                    provider: 'azurerm'
-                    command: 'apply'
-                    workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
-                    environmentServiceNameAzureRM: 'svc'
+                # - task: TerraformTask@5
+                # displayName : Terraform Apply
+                #   inputs:
+                #     provider: 'azurerm'
+                #     command: 'apply'
+                #     workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+                #     environmentServiceNameAzureRM: 'svc'
