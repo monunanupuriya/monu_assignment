@@ -1,0 +1,3 @@
+trigger: none  # Continuous integration triggers.
+pool: assignment_test # Pool where jobs in this pipeline will run unless otherwise specified.
+steps: 
