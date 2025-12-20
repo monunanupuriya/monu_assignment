@@ -14,4 +14,4 @@ steps:
     backendServiceArm: 'svc'
     backendAzureRmStorageAccountName: 'assignementstorage1'
     backendAzureRmContainerName: 'assignment'
-    backendAzureRmKey: 'dev/terraform.tfstate'
+    backendAzureRmKey: 'terraform.tfstate'
