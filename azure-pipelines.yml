@@ -5,36 +5,12 @@ steps:
   inputs:
     terraformVersion: 'latest'
 
-
-    - task: TerraformTask@5
-      inputs:
-        provider: 'azurerm'
-        command: 'init'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
-        backendServiceArm: 'svc'
-        backendAzureRmStorageAccountName: 'assignementstorage1'
-        backendAzureRmContainerName: 'assignment'
-        backendAzureRmKey: 'dev/terraform.tfstate'
-
-        - task: TerraformTask@5
-        displayName : Terraform validate
-          inputs:
-            provider: 'azurerm'
-            command: 'validate'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
-
-            - task: TerraformTask@5
-            displayName : Terraform Plan
-              inputs:
-                provider: 'azurerm'
-                command: 'plan'
-                workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
-                environmentServiceNameAzureRM: 'svc'
-
-                # - task: TerraformTask@5
-                # displayName : Terraform Apply
-                #   inputs:
-                #     provider: 'azurerm'
-                #     command: 'apply'
-                #     workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
-                #     environmentServiceNameAzureRM: 'svc'
+- task: TerraformTask@5
+  inputs:  
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+    backendServiceArm: 'svc'
+    backendAzureRmStorageAccountName: 'assignementstorage1'
+    backendAzureRmContainerName: 'assignment'
+    backendAzureRmKey: 'dev/terraform.tfstate'
