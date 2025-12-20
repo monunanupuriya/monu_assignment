@@ -1,5 +1,5 @@
-trigger: none  # Continuous integration triggers.
-pool: assignment_test # Pool where jobs in this pipeline will run unless otherwise specified.
+trigger: none 
+pool: assignment_test 
 steps: 
 - task: TerraformInstaller@1
   inputs:
